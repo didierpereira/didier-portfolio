@@ -20,12 +20,10 @@ const Particle = () => {
       <Particles
         id="tsparticles"
         options={{
-          background: {
-            //   color: {
-            //     value: "#0d47a1",
-            //   },
-          },
-          fpsLimit: 120,
+          background: {},
+          fpsLimit: 30,
+          pauseOnBlur: true,
+          pauseOnOutsideViewport: true,
           interactivity: {
             events: {
               onClick: {
@@ -33,8 +31,7 @@ const Particle = () => {
                 mode: "push",
               },
               onHover: {
-                enable: true,
-                mode: "repulse",
+                enable: false,
               },
               resize: {
                 enable: true,
@@ -42,11 +39,7 @@ const Particle = () => {
             },
             modes: {
               push: {
-                quantity: 4,
-              },
-              repulse: {
-                distance: 200,
-                duration: 0.4,
+                quantity: 2,
               },
             },
           },
@@ -68,7 +61,7 @@ const Particle = () => {
                 default: "bounce",
               },
               random: false,
-              speed: 4,
+              speed: 2,
               straight: false,
             },
             number: {
@@ -77,7 +70,7 @@ const Particle = () => {
                 width: 800,
                 height: 800,
               },
-              value: 80,
+              value: 40,
             },
             opacity: {
               value: 0.5,

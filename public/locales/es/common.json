@@ -1,4 +1,8 @@
 {
+  "seo": {
+    "title": "Didier Pereira | Front-End Developer",
+    "description": "Portfolio de Didier Pereira, Front-End Developer especializado en Next.js, React Native y TypeScript. Soluciones digitales escalables con integración de pagos, seguridad y automatización."
+  },
   "nav": {
     "inicio":    "INICIO",
     "sobreMi":   "SOBRE MI",

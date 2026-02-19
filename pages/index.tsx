@@ -14,9 +14,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import type { GetStaticProps } from 'next';
+import Head from 'next/head';
+import { useTranslation } from 'next-i18next';
 
 const HomePage: React.FC = () => {
   const [isOpenMenu, SetIsOpenMenu] = useState(false);
+  const { t } = useTranslation('common');
 
   const handleOpenMenu = (): void => SetIsOpenMenu(!isOpenMenu);
 
@@ -39,38 +42,51 @@ const HomePage: React.FC = () => {
       delay: 0, // values from 0 to 3000, with step 50ms
       duration: 1500, // values from 0 to 3000, with step 50ms
       easing: "ease", // default easing for AOS animations
-      once: false, // whether animation should happen only once - while scrolling down
+      once: true, // animación solo una vez -> reduce trabajo del hilo principal
       mirror: false, // whether elements should animate out while scrolling past them
       anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
     });
   }, []);
 
   return (
-    <div className="overflow-x-hidden">
-      <Nav handleOpenMenu={handleOpenMenu} />
-      <MobileNav isOpenMenu={isOpenMenu} handleOpenMenu={handleOpenMenu} />
-      <section id="inicio" className="section-anchor">
-        <Hero />
-      </section>
-      <div className="relative z-30">
-        <section id="sobre-mi" className="section-anchor">
-          <About />
-        </section>
-        <section id="servicios" className="section-anchor">
-          <Services />
-        </section>
-        {/* <Skills /> */}
-        <section id="proyectos" className="section-anchor">
-          <Projects />
-        </section>
-        <Testimonial />
-        <CertificatesCarousel />
-        {/* <Blog /> */}
-        <section id="contacto" className="section-anchor">
-          <Footer />
-        </section>
+    <>
+      <Head>
+        <title>{t('seo.title')}</title>
+        <meta name="description" content={t('seo.description')} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content={t('seo.title')} />
+        <meta property="og:description" content={t('seo.description')} />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://didier-portfolio.vercel.app" />
+      </Head>
+      <div className="overflow-x-hidden">
+        <Nav handleOpenMenu={handleOpenMenu} />
+        <MobileNav isOpenMenu={isOpenMenu} handleOpenMenu={handleOpenMenu} />
+        <main>
+          <section id="inicio" className="section-anchor">
+            <Hero />
+          </section>
+          <div className="relative z-30">
+            <section id="sobre-mi" className="section-anchor">
+              <About />
+            </section>
+            <section id="servicios" className="section-anchor">
+              <Services />
+            </section>
+            {/* <Skills /> */}
+            <section id="proyectos" className="section-anchor">
+              <Projects />
+            </section>
+            <Testimonial />
+            <CertificatesCarousel />
+            {/* <Blog /> */}
+            <section id="contacto" className="section-anchor">
+              <Footer />
+            </section>
+          </div>
+        </main>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -20,7 +20,7 @@ const About = () => {
           <CvButton />
         </div>
         <div data-aos='zoom-out' className='lg:w-[500px] mx-auto md:mx-0 mt-[2rem] lg:mt-0 lg:h-[500px] w-[300px] h-[300px] relative'>
-          <Image src='/images/about.jpg' alt='Didier FullStack Developer' layout='fill' objectFit='contain' className='relative z-[11] w-[100%] h-[100%] object-contain'/>
+          <Image src='/images/about.jpg' alt='Didier Pereira Front-End Developer' fill className='relative z-[11] w-[100%] h-[100%] object-contain'/>
           <div className='absolute w-[100%] h-[100%] bg-[#55e6a5] z-[10] top-[-2rem] right-[-2rem]'></div>
         </div>
       </div>

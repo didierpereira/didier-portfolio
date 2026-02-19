@@ -24,7 +24,7 @@ const Hero = () => {
         <div
           data-aos='zoom-in'
           className='w-[500px] hidden bg-[#55e6a5] relative lg:flex items-center rounded-full h-[500px]'>
-          <Image src='/images/u1.jpg' alt='user' layout='fill' className='object-cover rounded-full' />
+          <Image src='/images/u1.jpg' alt='Didier Pereira Front-End Developer' fill className='object-cover rounded-full' priority />
         </div>
       </div>
     </div>
