@@ -1,31 +1,24 @@
-import { useCallback } from "react";
-import type { Container, Engine } from "tsparticles-engine";
-import Particles from "react-tsparticles";
-//import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
-import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
+import { useEffect, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
 const Particle = () => {
-  const particlesInit = useCallback(async (engine: Engine) => {
+  const [init, setInit] = useState(false);
 
-    // you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    //await loadFull(engine);
-    await loadSlim(engine);
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
   }, []);
 
-  const particlesLoaded = useCallback(
-    async (container: Container | undefined) => {
-    },
-    []
-  );
+  if (!init) return null;
 
   return (
     <div>
       <Particles
         id="tsparticles"
-        init={particlesInit}
-        loaded={particlesLoaded}
         options={{
           background: {
             //   color: {
@@ -43,7 +36,9 @@ const Particle = () => {
                 enable: true,
                 mode: "repulse",
               },
-              resize: true,
+              resize: {
+                enable: true,
+              },
             },
             modes: {
               push: {
@@ -79,7 +74,8 @@ const Particle = () => {
             number: {
               density: {
                 enable: true,
-                area: 800,
+                width: 800,
+                height: 800,
               },
               value: 80,
             },

@@ -1,6 +1,8 @@
 import useScroll from "@/hooks/useScroll";
 import { XMarkIcon } from "@heroicons/react/20/solid";
 import React from "react";
+import { NAV_SECTIONS } from "@/constants";
+import { useTranslation } from "next-i18next";
 
 interface Props {
   handleOpenMenu: () => void;
@@ -9,6 +11,7 @@ interface Props {
 
 const MobileNav = ({ handleOpenMenu, isOpenMenu }: Props) => {
   const { currentMobile, handleClickMobile } = useScroll();
+  const { t } = useTranslation('common');
 
   const handleNavigation = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>
@@ -24,55 +27,16 @@ const MobileNav = ({ handleOpenMenu, isOpenMenu }: Props) => {
       className={`fixed ${navAnimation} transform transition-all duration-300 top-0 left-0 right-0 bottom-0 z-[10000] bg-[#09101a]`}
     >
       <div className="w-[100vw] h-[100vh] flex flex-col items-center justify-center">
-        <div
-          className={
-            currentMobile === "inicio" ? "selected-mobile" : "nav-link-mobile"
-          }
-          onClick={handleNavigation}
-        >
-          INICIO
-        </div>
-        <div
-          className={
-            currentMobile === "sobreMi" ? "selected-mobile" : "nav-link-mobile"
-          }
-          onClick={handleNavigation}
-        >
-          SOBRE MI
-        </div>
-
-        <div
-          className={
-            currentMobile === "servicios"
-              ? "selected-mobile"
-              : "nav-link-mobile"
-          }
-          onClick={handleNavigation}
-        >
-          SERVICIOS
-        </div>
-        <div
-          className={
-            currentMobile === "proyectos"
-              ? "selected-mobile"
-              : "nav-link-mobile"
-          }
-          onClick={handleNavigation}
-        >
-          PROYECTOS
-        </div>
-        {/* <div className={
-            currentMobile === "inicio" ? "selected-mobile" : "nav-link-mobile"
-          }
-          onClick={handleNavigation}>BLOG</div> */}
-        <div
-          className={
-            currentMobile === "contacto" ? "selected-mobile" : "nav-link-mobile"
-          }
-          onClick={handleNavigation}
-        >
-          CONTACTO
-        </div>
+        {NAV_SECTIONS.map((s) => (
+          <div
+            key={s.key}
+            data-section={s.key}
+            className={currentMobile === s.key ? "selected-mobile" : "nav-link-mobile"}
+            onClick={handleNavigation}
+          >
+            {t(`nav.${s.key}`)}
+          </div>
+        ))}
       </div>
       <div
         onClick={handleOpenMenu}

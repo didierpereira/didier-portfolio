@@ -5,12 +5,15 @@ import MobileNav from "@/components/MobileNav";
 import Nav from "@/components/Nav";
 import Projects from "@/components/Projects";
 import Services from "@/components/Services";
+import CertificatesCarousel from "@/components/CertificatesCarousel";
 // import Skills from '@/components/Skills'
-// import Testimonial from '@/components/Testimonial'
+import Testimonial from "@/components/Testimonial";
 import Footer from "@/components/Footer";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import type { GetStaticProps } from 'next';
 
 const HomePage: React.FC = () => {
   const [isOpenMenu, SetIsOpenMenu] = useState(false);
@@ -46,18 +49,35 @@ const HomePage: React.FC = () => {
     <div className="overflow-x-hidden">
       <Nav handleOpenMenu={handleOpenMenu} />
       <MobileNav isOpenMenu={isOpenMenu} handleOpenMenu={handleOpenMenu} />
-      <Hero />
+      <section id="inicio" className="section-anchor">
+        <Hero />
+      </section>
       <div className="relative z-30">
-        <About />
-        <Services />
+        <section id="sobre-mi" className="section-anchor">
+          <About />
+        </section>
+        <section id="servicios" className="section-anchor">
+          <Services />
+        </section>
         {/* <Skills /> */}
-        <Projects />
-        {/* <Testimonial /> */}
+        <section id="proyectos" className="section-anchor">
+          <Projects />
+        </section>
+        <Testimonial />
+        <CertificatesCarousel />
         {/* <Blog /> */}
-        <Footer />
+        <section id="contacto" className="section-anchor">
+          <Footer />
+        </section>
       </div>
     </div>
   );
 };
 
 export default HomePage;
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+  },
+});

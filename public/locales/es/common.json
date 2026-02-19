@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "inicio":    "INICIO",
+    "sobreMi":   "SOBRE MI",
+    "servicios": "SERVICIOS",
+    "proyectos": "PROYECTOS",
+    "contacto":  "CONTACTO"
+  },
+  "hero": {
+    "greeting":    "HOLA, SOY",
+    "description": "Front-End Developer especializado en Next.js, React Native y TypeScript. Construyo soluciones digitales escalables integrando pagos, seguridad y automatización."
+  },
+  "about": {
+    "sectionLabel":   "SOBRE MI",
+    "title":          "Front-End",
+    "titleHighlight": "Developer",
+    "bio": "Desarrollador Frontend con más de un año y medio de experiencia en entornos de alta presión, especializado en transformar requerimientos complejos en interfaces robustas y escalables. He liderado arquitecturas modulares, integraciones de pagos con Stripe y RevenueCat, sistemas KYC y RBAC, colaborando estrechamente con equipos de UX/UI, Backend y Mobile."
+  },
+  "services": {
+    "heading":          "Mis,",
+    "headingHighlight": "Servicios",
+    "card1Title": "Frontend",
+    "card1Items": [
+      "Next.js / React / TypeScript.",
+      "Arquitectura Modular y Escalable.",
+      "Responsive & Accesibilidad (WCAG).",
+      "Rendimiento y Optimización.",
+      "Automatización de Herramientas UI."
+    ],
+    "card2Title": "Pagos & Seguridad",
+    "card2Items": [
+      "Stripe & RevenueCat.",
+      "Verificación de Identidad (KYC).",
+      "Autenticación OTP / PIN.",
+      "Control de Accesos (RBAC).",
+      "Feature Toggles & Permisos."
+    ],
+    "card3Title": "React Native",
+    "card3Items": [
+      "Apps iOS & Android con Expo.",
+      "Gestión de Estado con Redux.",
+      "Navegación (left/right menus).",
+      "Drag & Drop y UI avanzada.",
+      "Sincronía con Backend & Mobile."
+    ]
+  },
+  "skills": {
+    "heading":          "Educación &",
+    "headingHighlight": "Skills",
+    "job1Title": "Jobchain® — Front-End Developer",
+    "job1Year":  "2024 - Presente",
+    "job2Title": "Tucán Marketing Digital — Full Stack Dev",
+    "job2Year":  "Ene 2024 - Abr 2024",
+    "job3Title": "React / Next.js Developer",
+    "job3Year":  "2023 - Presente",
+    "job4Title": "React Native / Expo",
+    "job4Year":  "2023 - Presente"
+  },
+  "cvButton": "Descargar CV",
+  "certifications": {
+    "heading":          "Mis",
+    "headingHighlight": "Certificaciones",
+    "viewCert":         "Ver certificado"
+  },
+  "testimonial": {
+    "heading":          "Reviews &",
+    "headingHighlight": "References"
+  },
+  "footer": {
+    "address":   "Dirección",
+    "phone":     "Teléfono",
+    "email":     "Email",
+    "copyright": "Front-End Developer Didier Pereira 2026 | Todos los derechos reservados.",
+    "terms":     "Términos & Condiciones",
+    "privacy":   "Política de Privacidad",
+    "sitemap":   "Mapa del Sitio"
+  },
+  "textEffect": [
+    "Front-End Developer",
+    "Next.js Developer",
+    "React Native Developer",
+    "TypeScript Developer"
+  ]
+}

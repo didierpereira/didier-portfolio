@@ -6,9 +6,10 @@ interface Props {
   image: string
   name: string
   role: string
+  review: string
 }
 
-const ClientReview = ({ image, name, role }: Props) => {
+const ClientReview = ({ image, name, role, review }: Props) => {
   return (
     <div className='flex flex-col text-center justify-center'>
       <Image src={image} alt={name} width={100} height={100} objectFit='contain' className='mx-auto mb-[2rem] rounded-full' />
@@ -21,7 +22,7 @@ const ClientReview = ({ image, name, role }: Props) => {
       </div>
       <h1 className='text-[25px] text-white mt-[1rem]'>{name}</h1>
       <p className='text-[18px] text-white opacity-75 mt-[0.5rem] mb-[1.4rem]'>{role}</p>
-      <p className='text-[16px] text-white opacity-50 w-[90%] md:w-[50%] mx-auto'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quas aperiam natus libero nostrum, suscipit totam aliquam. Non commodi placeat tempora laudantium laboriosam blanditiis fugit obcaecati, corrupti rem libero voluptates.</p>
+      <p className='text-[16px] text-white opacity-50 w-[90%] md:w-[50%] mx-auto'>{review}</p>
     </div>
   )
 }

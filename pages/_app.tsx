@@ -1,6 +1,14 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
+import { ViewTransition } from "react";
+import { appWithTranslation } from 'next-i18next';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+function App({ Component, pageProps }: AppProps) {
+  return (
+    <ViewTransition>
+      <Component {...pageProps} />
+    </ViewTransition>
+  );
 }
+
+export default appWithTranslation(App);

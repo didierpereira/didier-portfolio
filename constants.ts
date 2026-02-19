@@ -29,3 +29,12 @@ export const SECTIONS_MOBILES = {
   proyectos: { label: "PROYECTOS", position: SCROLL_POSITIONS_MOBILE.proyectos },
   contacto: { label: "CONTACTO", position: SCROLL_POSITIONS_MOBILE.contacto },
 };
+
+// Sistema de scroll basado en ids (robusto y responsive)
+export const NAV_SECTIONS = [
+  { key: 'inicio',    label: 'INICIO',    id: 'inicio'    },
+  { key: 'sobreMi',  label: 'SOBRE MI',  id: 'sobre-mi'  },
+  { key: 'servicios',label: 'SERVICIOS', id: 'servicios' },
+  { key: 'proyectos',label: 'PROYECTOS', id: 'proyectos' },
+  { key: 'contacto', label: 'CONTACTO',  id: 'contacto'  },
+] as const;

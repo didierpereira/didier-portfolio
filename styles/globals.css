@@ -1,7 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* ── Carrusel de certificados ── */
+@keyframes cert-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.cert-scroll-track {
+  animation: cert-scroll 35s linear infinite;
+  width: max-content;
+}
+
+.cert-scroll-track:hover {
+  animation-play-state: paused;
+}
+
+.cert-fade-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+}
+
+/* Compensa la altura del navbar fijo al hacer scroll a una sección */
+.section-anchor {
+  scroll-margin-top: 12vh;
+}
+::view-transition-old(cert-active) {
+  animation: cert-vt-shrink 0.35s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+::view-transition-new(cert-active) {
+  animation: cert-vt-expand 0.35s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes cert-vt-expand {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes cert-vt-shrink {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+}
 
 @layer components {
   .nav-link{
