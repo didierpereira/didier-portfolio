@@ -2,6 +2,7 @@ import React from "react"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 import ClientReview from "./ClientReview"
+import Link from "next/link"
 
 const responsive = {
   desktop: {
@@ -45,18 +46,24 @@ const TestimonialSlider = () => {
       responsive={responsive}
       itemClass="item"
     >
-      <ClientReview
-        image={ERIKA_IMAGE}
-        name="Erika Noelia Ladner"
-        role="Frontend Mobile | iOS Developer | React Native"
-        review={ERIKA_REVIEW}
-      />
-      <ClientReview
-        image={KERVIS_IMAGE}
-        name="kervis vasquez"
-        role="Desenvolvedor Full Stack Sênior | Laravel, React, Next.js e Nest.js | Arquitetura Limpa, APIs Escaláveis e Performance"
-        review={KERVIS_REVIEW}
-      />
+      <Link href={"https://www.linkedin.com/in/erikanoelialadner"}>
+        <ClientReview
+          image={ERIKA_IMAGE}
+          name="Erika Noelia Ladner"
+          role="Frontend Mobile | iOS Developer | React Native"
+          review={ERIKA_REVIEW}
+        />
+      </Link>
+      <Link
+        href={"https://www.linkedin.com/in/full-stack-developer-kervis-vasquez"}
+      >
+        <ClientReview
+          image={KERVIS_IMAGE}
+          name="kervis vasquez"
+          role="Desenvolvedor Full Stack Sênior | Laravel, React, Next.js e Nest.js | Arquitetura Limpa, APIs Escaláveis e Performance"
+          review={KERVIS_REVIEW}
+        />
+      </Link>
     </Carousel>
   )
 }
