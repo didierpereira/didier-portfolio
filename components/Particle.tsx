@@ -1,19 +1,19 @@
-import { useEffect, useState } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
+import { useEffect, useState } from "react"
+import Particles, { initParticlesEngine } from "@tsparticles/react"
+import { loadSlim } from "@tsparticles/slim"
 
 const Particle = () => {
-  const [init, setInit] = useState(false);
+  const [init, setInit] = useState(false)
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
+      await loadSlim(engine)
     }).then(() => {
-      setInit(true);
-    });
-  }, []);
+      setInit(true)
+    })
+  }, [])
 
-  if (!init) return null;
+  if (!init) return null
 
   return (
     <div>
@@ -71,7 +71,7 @@ const Particle = () => {
                 width: 800,
                 height: 800,
               },
-              value: 40,
+              value: 80,
             },
             opacity: {
               value: 0.5,
@@ -87,7 +87,7 @@ const Particle = () => {
         }}
       />
     </div>
-  );
-};
+  )
+}
 
-export default Particle;
+export default Particle
