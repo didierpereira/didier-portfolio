@@ -31,7 +31,8 @@ const Particle = () => {
                 mode: "push",
               },
               onHover: {
-                enable: false,
+                enable: true,
+                mode: "repulse",
               },
               resize: {
                 enable: true,
