@@ -1,13 +1,12 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import Image from "next/image"
+import Link from "next/link"
 import {
   CssIcon,
   ExpressIcon,
   GitHubIcon,
-  GitIcon,
   JsIcon,
   LiveBloksIcon,
+  MongoDBIcon,
   NextIcon,
   NodeIcon,
   PostgresIcon,
@@ -18,7 +17,8 @@ import {
   TailwindIcon,
   TsIcon,
   ViteIcon,
-} from "../icons.jsx";
+  ZustandIcon,
+} from "../icons.jsx"
 
 const Projects = () => {
   return (
@@ -27,7 +27,6 @@ const Projects = () => {
         Pro<span className="text-yellow-400">yectos</span>
       </h2>
       <div className="w-[80%] pt-[2rem] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2rem]">
-
         <div data-aos="fade-up">
           <Link href="https://figma-clone-dusky.vercel.app/">
             <div className="transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative w-[100%] h-[200px] md:h-[300px]">
@@ -54,31 +53,32 @@ const Projects = () => {
         </div>
 
         <div data-aos="fade-up">
-          <Link href="https://url-shortener-one-pi.vercel.app/">
+          <Link href="https://spotify-clone-ag5m.onrender.com/">
             <div className="transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative w-[100%] h-[200px] md:h-[300px]">
               <Image
-                src="/images/p2.png"
-                alt="easy design"
+                src="/images/spotify.png"
+                alt="spotify clone"
                 layout="fill"
                 className="object-contain"
               />
             </div>
             <h2 className="text-yellow-400 font-semibold text-[20px] mt-[-2.5rem]">
-              Bitly Clon acortador minimalista
+              Spotify Clon en tiempo real
             </h2>
           </Link>
           <div className="flex flex-row h-[25px] gap-4">
-            <GitHubIcon />
-            <NodeIcon />
-            <ViteIcon />
             <ReactIcon />
+            <ViteIcon />
+            <TailwindIcon />
             <TsIcon />
-            <CssIcon />
+            <NodeIcon />
             <ExpressIcon />
-            <PrismaIcon />
-            <PostgresIcon />
+            <ZustandIcon />
+            <MongoDBIcon />
+            <GitHubIcon />
           </div>
         </div>
+
         <div data-aos="fade-up">
           <Link href="https://pi-client-tau.vercel.app/">
             <div className="transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative w-[100%] h-[200px] md:h-[300px]">
@@ -122,7 +122,7 @@ const Projects = () => {
         </div> */}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects
