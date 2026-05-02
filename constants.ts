@@ -34,7 +34,7 @@ export const SECTIONS_MOBILES = {
 export const NAV_SECTIONS = [
   { key: 'inicio',    label: 'INICIO',    id: 'inicio'    },
   { key: 'sobreMi',  label: 'SOBRE MI',  id: 'sobre-mi'  },
-  { key: 'servicios',label: 'SERVICIOS', id: 'servicios' },
+  // { key: 'servicios',label: 'SERVICIOS', id: 'servicios' },
   { key: 'proyectos',label: 'PROYECTOS', id: 'proyectos' },
   { key: 'contacto', label: 'CONTACTO',  id: 'contacto'  },
 ] as const;

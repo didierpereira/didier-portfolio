@@ -4,24 +4,24 @@
     "description": "Portfolio de Didier Pereira, Front-End Developer especializado en Next.js, React Native y TypeScript. Soluciones digitales escalables con integración de pagos, seguridad y automatización."
   },
   "nav": {
-    "inicio":    "INICIO",
-    "sobreMi":   "SOBRE MI",
+    "inicio": "INICIO",
+    "sobreMi": "SOBRE MI",
     "servicios": "SERVICIOS",
     "proyectos": "PROYECTOS",
-    "contacto":  "CONTACTO"
+    "contacto": "CONTACTO"
   },
   "hero": {
-    "greeting":    "HOLA, SOY",
+    "greeting": "HOLA, SOY",
     "description": "Front-End Developer especializado en Next.js, React Native y TypeScript. Construyo soluciones digitales escalables integrando pagos, seguridad y automatización."
   },
   "about": {
-    "sectionLabel":   "SOBRE MI",
-    "title":          "Front-End",
+    "sectionLabel": "SOBRE MI",
+    "title": "Front-End",
     "titleHighlight": "Developer",
-    "bio": "Desarrollador Frontend con más de un año y medio de experiencia en entornos de alta presión, especializado en transformar requerimientos complejos en interfaces robustas y escalables. He liderado arquitecturas modulares, integraciones de pagos con Stripe y RevenueCat, sistemas KYC y RBAC, colaborando estrechamente con equipos de UX/UI, Backend y Mobile."
+    "bio": "Desarrollador Frontend con más de 2 años de experiencia especializado en React, Next.js y TypeScript. Me desenvuelvo con soltura en entornos complejos y de alta exigencia, con estándares Perfect Pixel a partir de diseños en Figma y diseñando sistemas modulares de componentes, implementando control de acceso basado en roles (RBAC) y optimizando el rendimiento de renderizado para plataformas que requieren fiabilidad y cumplimiento normativo."
   },
   "services": {
-    "heading":          "Mis,",
+    "heading": "Mis,",
     "headingHighlight": "Servicios",
     "card1Title": "Frontend",
     "card1Items": [
@@ -49,35 +49,35 @@
     ]
   },
   "skills": {
-    "heading":          "Educación &",
+    "heading": "Educación &",
     "headingHighlight": "Skills",
     "job1Title": "Jobchain® — Front-End Developer",
-    "job1Year":  "2024 - Presente",
+    "job1Year": "2024 - Presente",
     "job2Title": "Tucán Marketing Digital — Full Stack Dev",
-    "job2Year":  "Ene 2024 - Abr 2024",
+    "job2Year": "Ene 2024 - Abr 2024",
     "job3Title": "React / Next.js Developer",
-    "job3Year":  "2023 - Presente",
+    "job3Year": "2023 - Presente",
     "job4Title": "React Native / Expo",
-    "job4Year":  "2023 - Presente"
+    "job4Year": "2023 - Presente"
   },
   "cvButton": "Descargar CV",
   "certifications": {
-    "heading":          "Mis",
+    "heading": "Mis",
     "headingHighlight": "Certificaciones",
-    "viewCert":         "Ver certificado"
+    "viewCert": "Ver certificado"
   },
   "testimonial": {
-    "heading":          "Reviews &",
+    "heading": "Reviews &",
     "headingHighlight": "References"
   },
   "footer": {
-    "address":   "Dirección",
-    "phone":     "Teléfono",
-    "email":     "Email",
+    "address": "Dirección",
+    "phone": "Teléfono",
+    "email": "Email",
     "copyright": "Front-End Developer Didier Pereira 2026 | Todos los derechos reservados.",
-    "terms":     "Términos & Condiciones",
-    "privacy":   "Política de Privacidad",
-    "sitemap":   "Mapa del Sitio"
+    "terms": "Términos & Condiciones",
+    "privacy": "Política de Privacidad",
+    "sitemap": "Mapa del Sitio"
   },
   "textEffect": [
     "Front-End Developer",

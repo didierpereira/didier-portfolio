@@ -70,9 +70,9 @@ const HomePage: React.FC = () => {
             <section id="sobre-mi" className="section-anchor">
               <About />
             </section>
-            <section id="servicios" className="section-anchor">
+            {/* <section id="servicios" className="section-anchor">
               <Services />
-            </section>
+            </section> */}
             {/* <Skills /> */}
             <section id="proyectos" className="section-anchor">
               <Projects />
