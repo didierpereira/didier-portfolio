@@ -27,7 +27,7 @@ const Projects = () => {
         Pro<span className="text-yellow-400">yectos</span>
       </h2>
       <div className="w-[80%] pt-[2rem] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2rem]">
-        <div data-aos="fade-up">
+        {/* <div data-aos="fade-up">
           <Link href="https://figma-clone-dusky.vercel.app/">
             <div className="transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative w-[100%] h-[200px] md:h-[300px]">
               <Image
@@ -50,7 +50,7 @@ const Projects = () => {
             <TailwindIcon />
             <LiveBloksIcon />
           </div>
-        </div>
+        </div> */}
 
         <div data-aos="fade-up">
           <Link href="https://spotify-clone-ag5m.onrender.com/">
